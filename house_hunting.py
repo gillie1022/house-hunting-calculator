@@ -23,6 +23,7 @@ current_savings = 0
 num_months = 0
 
 while current_savings <= int(portion_down_payment):
-    current_savings += (annual_salary * portion_saved)/12 + current_savings*r/12
+    current_savings += current_savings*r/12 + (annual_salary * portion_saved)/12
     num_months += 1
+
 print("Number of months: " + str(num_months))
